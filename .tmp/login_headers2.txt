@@ -1,0 +1,12 @@
+HTTP/1.1 200 OK
+Date: Fri, 05 Dec 2025 16:46:47 GMT
+Server: Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1
+X-Powered-By: PHP/8.2.12
+Set-Cookie: ci_session=cee622c13cd41318001fbfc4178b54d2; expires=Fri, 05 Dec 2025 18:46:47 GMT; Max-Age=7200; path=/; HttpOnly; SameSite=Lax
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Set-Cookie: csrf_cookie_name=8e82eb8a04c7f6eebb8ce34a67e67f36; expires=Fri, 05 Dec 2025 18:46:47 GMT; Max-Age=7200; path=/; HttpOnly; SameSite=Lax
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+

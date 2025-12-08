@@ -1,0 +1,159 @@
+{
+    "title": "ErrorException",
+    "type": "ErrorException",
+    "code": 500,
+    "message": "Undefined array key \"nom\"",
+    "file": "/opt/lampp/htdocs/projet-CVVEN/app/Views/clients/dashboard.php",
+    "line": 45,
+    "trace": [
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/app/Views/clients/dashboard.php",
+            "line": 45,
+            "function": "errorHandler",
+            "class": "CodeIgniter\\Debug\\Exceptions",
+            "type": "->",
+            "args": [
+                2,
+                "Undefined array key \"nom\"",
+                "/opt/lampp/htdocs/projet-CVVEN/app/Views/clients/dashboard.php",
+                45
+            ]
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/vendor/codeigniter4/framework/system/View/View.php",
+            "line": 226,
+            "args": [
+                "/opt/lampp/htdocs/projet-CVVEN/app/Views/clients/dashboard.php"
+            ],
+            "function": "include"
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/vendor/codeigniter4/framework/system/View/View.php",
+            "line": 229,
+            "function": "CodeIgniter\\View\\{closure}",
+            "class": "CodeIgniter\\View\\View",
+            "type": "->",
+            "args": []
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/vendor/codeigniter4/framework/system/Common.php",
+            "line": 1167,
+            "function": "render",
+            "class": "CodeIgniter\\View\\View",
+            "type": "->",
+            "args": [
+                "clients/dashboard",
+                [],
+                true
+            ]
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/app/Controllers/ClientController.php",
+            "line": 37,
+            "function": "view",
+            "args": [
+                "clients/dashboard",
+                {
+                    "client": [],
+                    "reservations": []
+                }
+            ]
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/vendor/codeigniter4/framework/system/CodeIgniter.php",
+            "line": 933,
+            "function": "dashboard",
+            "class": "App\\Controllers\\ClientController",
+            "type": "->",
+            "args": []
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/vendor/codeigniter4/framework/system/CodeIgniter.php",
+            "line": 507,
+            "function": "runController",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->",
+            "args": [
+                {}
+            ]
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/vendor/codeigniter4/framework/system/CodeIgniter.php",
+            "line": 354,
+            "function": "handleRequest",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->",
+            "args": [
+                null,
+                {
+                    "handler": "file",
+                    "backupHandler": "dummy",
+                    "prefix": "",
+                    "ttl": 60,
+                    "reservedCharacters": "{}()/\\@:",
+                    "file": {
+                        "storePath": "/opt/lampp/htdocs/projet-CVVEN/writable/cache/",
+                        "mode": 416
+                    },
+                    "memcached": {
+                        "host": "127.0.0.1",
+                        "port": 11211,
+                        "weight": 1,
+                        "raw": false
+                    },
+                    "redis": {
+                        "host": "127.0.0.1",
+                        "password": null,
+                        "port": 6379,
+                        "timeout": 0,
+                        "database": 0
+                    },
+                    "validHandlers": {
+                        "dummy": "CodeIgniter\\Cache\\Handlers\\DummyHandler",
+                        "file": "CodeIgniter\\Cache\\Handlers\\FileHandler",
+                        "memcached": "CodeIgniter\\Cache\\Handlers\\MemcachedHandler",
+                        "predis": "CodeIgniter\\Cache\\Handlers\\PredisHandler",
+                        "redis": "CodeIgniter\\Cache\\Handlers\\RedisHandler",
+                        "wincache": "CodeIgniter\\Cache\\Handlers\\WincacheHandler"
+                    },
+                    "cacheQueryString": false
+                },
+                false
+            ]
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/vendor/codeigniter4/framework/system/Boot.php",
+            "line": 363,
+            "function": "run",
+            "class": "CodeIgniter\\CodeIgniter",
+            "type": "->",
+            "args": []
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/vendor/codeigniter4/framework/system/Boot.php",
+            "line": 68,
+            "function": "runCodeIgniter",
+            "class": "CodeIgniter\\Boot",
+            "type": "::",
+            "args": [
+                {}
+            ]
+        },
+        {
+            "file": "/opt/lampp/htdocs/projet-CVVEN/index.php",
+            "line": 61,
+            "function": "bootWeb",
+            "class": "CodeIgniter\\Boot",
+            "type": "::",
+            "args": [
+                {
+                    "systemDirectory": "/opt/lampp/htdocs/projet-CVVEN/app/Config/../../vendor/codeigniter4/framework/system",
+                    "appDirectory": "/opt/lampp/htdocs/projet-CVVEN/app/Config/..",
+                    "writableDirectory": "/opt/lampp/htdocs/projet-CVVEN/app/Config/../../writable",
+                    "testsDirectory": "/opt/lampp/htdocs/projet-CVVEN/app/Config/../../tests",
+                    "viewDirectory": "/opt/lampp/htdocs/projet-CVVEN/app/Config/../Views"
+                }
+            ]
+        }
+    ]
+}

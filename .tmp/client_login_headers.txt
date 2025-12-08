@@ -1,0 +1,19 @@
+HTTP/1.1 303 See Other
+Date: Fri, 05 Dec 2025 16:44:40 GMT
+Server: Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1
+X-Powered-By: PHP/8.2.12
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, max-age=0, no-cache
+Pragma: no-cache
+Location: http://localhost/projet-CVVEN/dashboard
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+HTTP/1.1 404 Not Found
+Date: Fri, 05 Dec 2025 16:44:40 GMT
+Server: Apache/2.4.58 (Unix) OpenSSL/1.1.1w PHP/8.2.12 mod_perl/2.0.12 Perl/v5.34.1
+X-Powered-By: PHP/8.2.12
+Cache-Control: no-store, max-age=0, no-cache
+Content-Length: 2423
+Content-Type: application/json; charset=UTF-8
+
