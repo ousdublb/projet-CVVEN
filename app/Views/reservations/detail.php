@@ -27,8 +27,8 @@
                             <div class="col-md-6">
                                 <h5>Informations du client</h5>
                                 <p>
-                                    <strong>Nom:</strong> <?= htmlspecialchars($reservation['nom']) ?> <?= htmlspecialchars($reservation['prenom']) ?><br>
-                                    <strong>Email:</strong> <?= htmlspecialchars($reservation['email']) ?>
+                                    <strong>Nom:</strong> <?= htmlspecialchars($reservation['nom'] ?? '') ?> <?= htmlspecialchars($reservation['prenom'] ?? '') ?><br>
+                                    <strong>Email:</strong> <?= htmlspecialchars($reservation['client_email'] ?? $reservation['email'] ?? '—') ?>
                                 </p>
 
                                 <h5>Informations de la chambre</h5>
