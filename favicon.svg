@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Background rounded square matching app accent -->
+  <rect width="64" height="64" rx="8" fill="#DD4814"/>
+  <!-- Hotel emoji centered -->
+  <text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle"
+        font-size="36" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,EmojiOne Color,serif">🏨</text>
+</svg>
