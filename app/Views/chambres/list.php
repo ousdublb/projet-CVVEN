@@ -20,7 +20,11 @@
                     </li>
                     <?php if (session()->get('isLoggedIn')): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= base_url('client/dashboard') ?>">Mon compte</a>
+                            <?php if (session()->get('role') === 'admin'): ?>
+                                <a class="nav-link" href="<?= base_url('admin/dashboard') ?>">Mon compte</a>
+                            <?php else: ?>
+                                <a class="nav-link" href="<?= base_url('client/dashboard') ?>">Mon compte</a>
+                            <?php endif; ?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?= base_url('auth/logout') ?>">Déconnexion</a>
