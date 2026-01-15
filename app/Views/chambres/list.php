@@ -72,7 +72,7 @@
         <!-- Admin Panel -->
         <?php if (session()->get('role') === 'admin'): ?>
             <div class="mb-3">
-                <a href="<?= base_url('chambres/create') ?>" class="btn btn-success">+ Ajouter une chambre</a>
+                <a href="<?= base_url('chambre/create') ?>" class="btn btn-success">+ Ajouter une chambre</a>
             </div>
         <?php endif; ?>
 
