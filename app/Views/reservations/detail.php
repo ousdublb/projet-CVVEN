@@ -14,7 +14,7 @@
     </nav>
 
     <div class="container mt-4">
-        <a href="<?= base_url('client/reservations') ?>" class="btn btn-secondary mb-3">← Retour</a>
+        <a href="<?= session()->get('role') === 'admin' ? base_url('admin/reservations') : base_url('client/reservations') ?>" class="btn btn-secondary mb-3">← Retour</a>
 
         <div class="row">
             <div class="col-md-8">
