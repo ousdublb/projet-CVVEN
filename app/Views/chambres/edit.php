@@ -16,9 +16,23 @@
     <div class="container mt-4">
         <h2>Modifier la chambre</h2>
 
+        <?php if (session()->getFlashdata('success')): ?>
+            <div class="alert alert-success alert-dismissible fade show">
+                <?= session()->getFlashdata('success') ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        <?php endif; ?>
+
+        <?php if (session()->getFlashdata('error')): ?>
+            <div class="alert alert-danger alert-dismissible fade show">
+                <?= session()->getFlashdata('error') ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        <?php endif; ?>
+
         <div class="row">
             <div class="col-md-6">
-                <form method="POST" action="<?= base_url('chambre/update/' . $chambre['id_chambre']) ?>">
+                <form method="POST" action="<?= base_url('chambre/update/' . $chambre['id_chambre']) ?>" enctype="multipart/form-data">
                     <?= csrf_field() ?>
 
                     <div class="form-group mb-3">
@@ -50,6 +64,21 @@
                         <input type="number" class="form-control" id="prix_par_nuit" name="prix_par_nuit" step="0.01" min="0" required value="<?= htmlspecialchars($chambre['prix_par_nuit']) ?>">
                         <?php if (isset($errors['prix_par_nuit'])): ?>
                             <small class="text-danger"><?= $errors['prix_par_nuit'] ?></small>
+                        <?php endif; ?>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="image" class="form-label">Image de la chambre</label>
+                        <?php if (!empty($chambre['image'])): ?>
+                            <div class="mb-2">
+                                <img src="<?= base_url('uploads/' . $chambre['image']) ?>" alt="Image actuelle" class="img-thumbnail" style="max-width: 200px;">
+                                <p class="text-muted">Image actuelle</p>
+                            </div>
+                        <?php endif; ?>
+                        <input type="file" class="form-control" id="image" name="image" accept="image/*">
+                        <small class="form-text text-muted">Laissez vide pour garder l'image actuelle</small>
+                        <?php if (isset($errors['image'])): ?>
+                            <small class="text-danger"><?= $errors['image'] ?></small>
                         <?php endif; ?>
                     </div>
 

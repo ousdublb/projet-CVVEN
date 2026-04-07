@@ -97,6 +97,20 @@ class ChambreController extends Controller
             'prix_par_nuit' => $this->request->getPost('prix_par_nuit')
         ];
 
+        // Handle image upload
+        $image = $this->request->getFile('image');
+        if ($image && $image->isValid() && !$image->hasMoved()) {
+            if ($image->getSize() > 2048000) { // 2MB limit
+                return redirect()->back()->withInput()->with('error', 'L\'image ne doit pas dépasser 2MB.');
+            }
+            if (!in_array($image->getMimeType(), ['image/jpeg', 'image/png', 'image/gif', 'image/webp'])) {
+                return redirect()->back()->withInput()->with('error', 'Seules les images JPEG, PNG, GIF et WebP sont autorisées.');
+            }
+            $newName = $image->getRandomName();
+            $image->move(FCPATH . 'uploads', $newName);
+            $data['image'] = $newName;
+        }
+
         if (!$this->validate([
             'nom' => 'required|min_length[3]',
             'capacite' => 'required|numeric|greater_than[0]',
@@ -146,6 +160,20 @@ class ChambreController extends Controller
             'description' => $this->request->getPost('description'),
             'prix_par_nuit' => $this->request->getPost('prix_par_nuit')
         ];
+
+        // Handle image upload
+        $image = $this->request->getFile('image');
+        if ($image && $image->isValid() && !$image->hasMoved()) {
+            if ($image->getSize() > 2048000) { // 2MB limit
+                return redirect()->back()->withInput()->with('error', 'L\'image ne doit pas dépasser 2MB.');
+            }
+            if (!in_array($image->getMimeType(), ['image/jpeg', 'image/png', 'image/gif', 'image/webp'])) {
+                return redirect()->back()->withInput()->with('error', 'Seules les images JPEG, PNG, GIF et WebP sont autorisées.');
+            }
+            $newName = $image->getRandomName();
+            $image->move(FCPATH . 'uploads', $newName);
+            $data['image'] = $newName;
+        }
 
         if (!$this->validate([
             'nom' => 'required|min_length[3]',

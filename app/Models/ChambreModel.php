@@ -12,7 +12,7 @@ class ChambreModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nom', 'capacite', 'description', 'prix_par_nuit', 'created_at', 'updated_at'];
+    protected $allowedFields    = ['nom', 'capacite', 'description', 'prix_par_nuit', 'image', 'created_at', 'updated_at'];
 
     // Dates
     protected $useTimestamps = true;
@@ -26,6 +26,7 @@ class ChambreModel extends Model
         'capacite'       => 'required|numeric|greater_than[0]|less_than_equal_to[10]',
         'description'    => 'permit_empty|max_length[500]',
         'prix_par_nuit'  => 'required|numeric|greater_than[0]',
+        'image'          => 'permit_empty|max_length[255]',
     ];
     protected $validationMessages   = [];
     protected $skipValidation       = false;

@@ -26,6 +26,9 @@
                 <?php foreach ($chambres as $chambre): ?>
                     <div class="col-md-4 mb-4">
                         <div class="card">
+                            <?php if (!empty($chambre['image'])): ?>
+                                <img src="<?= base_url('uploads/' . $chambre['image']) ?>" class="card-img-top" alt="<?= htmlspecialchars($chambre['nom']) ?>" style="height: 200px; object-fit: cover;">
+                            <?php endif; ?>
                             <div class="card-body">
                                 <h5 class="card-title"><?= htmlspecialchars($chambre['nom']) ?></h5>
                                 <p class="card-text">

@@ -18,6 +18,11 @@
 
         <div class="row">
             <div class="col-md-8">
+                <?php if (!empty($chambre['image'])): ?>
+                    <div class="mb-4">
+                        <img src="<?= base_url('uploads/' . $chambre['image']) ?>" alt="<?= htmlspecialchars($chambre['nom']) ?>" class="img-fluid rounded">
+                    </div>
+                <?php endif; ?>
                 <div class="card">
                     <div class="card-body">
                         <h2><?= htmlspecialchars($chambre['nom']) ?></h2>
