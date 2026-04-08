@@ -17,7 +17,7 @@ $routes->get('auth/logout', 'AuthController::logout');
 // Client Dashboard and Profile Routes
 $routes->group('client', static function ($routes) {
     $routes->get('dashboard', 'ClientController::dashboard', ['filter' => 'auth']);
-    $routes->get('edit-profile', 'ClientController::editForm', ['filter' => 'auth']);
+    $routes->get('edit-profile', 'ClientController::editProfile', ['filter' => 'auth']);
     $routes->post('update-profile', 'ClientController::updateProfile', ['filter' => 'auth']);
     $routes->get('reservations', 'ClientController::viewReservations', ['filter' => 'auth']);
 });
