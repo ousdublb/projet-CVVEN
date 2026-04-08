@@ -47,12 +47,12 @@ class AuthController extends Controller
         $user = $this->userModel->where('email', $email)->first();
 
         if (!$user) {
-            return redirect()->back()->with('error', 'Email ou mot de passe incorrect.');
+            return redirect()->back()->withInput()->with('error', 'Email ou mot de passe incorrect.');
         }
 
         // Verify password
         if (!password_verify($password, $user['mot_de_passe'])) {
-            return redirect()->back()->with('error', 'Email ou mot de passe incorrect.');
+            return redirect()->back()->withInput()->with('error', 'Email ou mot de passe incorrect.');
         }
 
         // Set session
@@ -99,7 +99,7 @@ class AuthController extends Controller
         // Validation
         if (!$this->validate([
             'email' => 'required|valid_email|is_unique[users.email]',
-            'mot_de_passe' => 'required|min_length[6]|matches[mot_de_passe_confirm]',
+            'mot_de_passe' => 'required|min_length[12]|matches[mot_de_passe_confirm]',
             'mot_de_passe_confirm' => 'required',
             'nom' => 'required|min_length[2]',
             'prenom' => 'required|min_length[2]',

@@ -23,7 +23,7 @@ class UserModel extends Model
     // Validation
     protected $validationRules      = [
         'email'         => 'required|valid_email|is_unique[users.email]',
-        'mot_de_passe'  => 'required|min_length[6]',
+        'mot_de_passe'  => 'required|min_length[12]',
         'role'          => 'required|in_list[admin,client]',
     ];
     protected $validationMessages   = [];
