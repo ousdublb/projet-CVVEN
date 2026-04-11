@@ -25,13 +25,14 @@ php spark migrate
 php spark db:seed InitialDataSeeder
 
 # 5. Accéder à l'application
-# http://localhost/projet-CVVEN/login
+# Page d'accueil: http://localhost/projet-CVVEN/
+# Connexion: http://localhost/projet-CVVEN/login
 # Admin: admin@hotel.com / admin123
 ```
 
 ---
 
-## 📂 Fichiers créés (32 fichiers)
+## 📂 Fichiers créés (33 fichiers)
 
 ### **MODÈLES (4)**
 - ✅ `app/Models/UserModel.php` - Gestion utilisateurs
@@ -46,7 +47,8 @@ php spark db:seed InitialDataSeeder
 - ✅ `app/Controllers/ReservationController.php` - Gestion réservations
 - ✅ `app/Controllers/AdminController.php` - Admin dashboard
 - ✅ `app/Controllers/TestController.php` - Tests BD
-
+5)**
+- ✅ `app/Views/home.php` - Page d'accueil moderne et responsive
 ### **VUES (14)**
 - ✅ `app/Views/auth/login.php` - Formulaire connexion
 - ✅ `app/Views/auth/register.php` - Formulaire inscription
@@ -163,7 +165,12 @@ RESERVATIONS
 ---
 
 ## 🛣️ Routes disponibles
+ccueil**
+```
+GET  /                         → Page d'accueil moderne
+```
 
+### **A
 ### **Authentification**
 ```
 GET  /login                    → Formulaire connexion
@@ -527,12 +534,32 @@ Pour déployer en production:
 ---
 
 ## 📝 Licence
+👨‍💼 Créateurs du Projet
 
-Ce projet est fourni à titre d'exemple éducatif.
+Ce système de réservation d'hôtel a été conçu et développé par :
+
+- **Ousmane DIAKHO**
+- **Zinedine AMOR**
+- **Sofiane ATTAL**
+- **Asaad AID**
+
+**Étudiants BTS SIO | Lycée René Descartes | 2025/2026**
 
 ---
 
 ## 🎉 Conclusion
+
+Vous avez maintenant un **système de réservation d'hôtel complet et fonctionnel** avec une **page d'accueil moderne et professionnelle** construit avec CodeIgniter 4.
+
+Le projet inclut:
+- ✅ **Page d'accueil élégante** avec design responsive et animations fluides
+- ✅ **Système de réservation complet** avec gestion des chambres et des clients
+- ✅ **Panneau d'administration** pour la gestion des réservations et utilisateurs
+- ✅ **Authentification sécurisée** avec sessions et validation des données
+- ✅ **Design moderne** utilisant Bootstrap 5 et CSS personnalisé
+
+Le projet est prêt à:
+- ✅ Être utilisé comme base pour un vrai projet hôtelier
 
 Vous avez maintenant un **système de réservation d'hôtel complet et fonctionnel** construit avec CodeIgniter 4.
 

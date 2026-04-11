@@ -966,6 +966,10 @@
                     <a href="#">Politique de confidentialité</a> | 
                     <a href="#">Conditions d'utilisation</a>
                 </p>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: #95A5A6;">
+                    Site conçu par <strong>Ousmane DIAKHO</strong>, <strong>Zinedine AMOR</strong>, <strong>Sofiane ATTAL</strong>, <strong>Asaad AID</strong><br>
+                    Étudiants BTS SIO | Lycée René Descartes  77420 | 2025/2026
+                </p>
             </div>
         </div>
     </footer>
